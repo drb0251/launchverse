@@ -94,23 +94,23 @@
 
     <div class="msg-card">
       <form name="contact-info" method=POST data-netlify="true" onSubmit="submit">
-        <label for="first">First name:</label>
-        <input type="text" name="first" placeholder="John" required>
-        <label for="last">Last name:</label>
-        <input type="text" name="last" placeholder="Doe" required>
+        <div>
+          <label for="first">First name:</label>
+          <input type="text" name="first" placeholder="John" required>
+          <label for="last">Last name:</label>
+          <input type="text" name="last" placeholder="Doe" required>         
+        </div>
+        <div>
+          <label for="e-mail" required>Enter your e-mail:</label>
+          <input type="e-mail" name="e-mail" placeholder="johndoe@gmail.com" required>
+          <label for="mobile" required>Enter your number:</label>
+          <input type="number" name="mobile" placeholder="numbers only">         
+        </div>
 
-        <label for="e-mail" required>Enter your e-mail:</label>
-        <input type="e-mail" name="e-mail" placeholder="johndoe@gmail.com" required>
-
-        <label for="mobile" required>Enter your number:</label>
-        <input type="number" name="mobile" placeholder="numbers only">
-        
+        <input class="txtbox" type="text" name="txtbox" placeholder="Type your message here :)">
+  
       </form>
-      <form name="message-content" method=POST data-netlify="true" onSubmit="submit">
-        <label for="txtbox">Write us a message here:</label>
-        <input class="txtbox" type="text" name="txtbox" placeholder="We need to work together!">
-      </form>
-      
+            
     </div>
     <button class="sub-btn" type="submit" name="Submit">Submit</button>
     <div class="make-room">
