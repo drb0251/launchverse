@@ -93,7 +93,7 @@
     <h3>OR fill out this form and we'll be in touch in no time!</h3>
 
     <div class="msg-card">
-      <form netlify>
+      <form name="contact-info" method=POST netlify>
         <label for="first">First name:</label>
         <input type="text" name="first" placeholder="John" required>
         <label for="last">Last name:</label>
@@ -106,7 +106,7 @@
         <input type="number" name="mobile" placeholder="numbers only">
         
       </form>
-      <form>
+      <form name="message-content" method=POST netlify>
         <label for="txtbox">Write us a message here:</label>
         <input class="txtbox" type="text" name="txtbox" placeholder="We need to work together!">
       </form>
