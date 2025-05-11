@@ -4,13 +4,18 @@ body {
   font-style: normal;
 }
 
-.navbar {
+nav {
   display: flex;
   flex-direction: column; 
+
 }
 
 .logo {
   cursor: pointer;
+  border: 1px solid black;
+  border-radius: 10px;
+  box-shadow: 5px 5px #000000;
+  margin: 5px;
 }
 
 li, a, button {
@@ -44,6 +49,10 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 10px, 10px;
+  position: sticky;
+  top: 0;
+  overflow: hidden;
+  margin-bottom:20px;
 }
 div {
   display: flex;
@@ -55,8 +64,7 @@ div {
   display: flex;
   flex-direction: column;
   align-items: center; 
-
-  margin: 10px auto;
+  margin: 30px auto;
   max-width: 75%;
 
 }
@@ -64,8 +72,7 @@ div {
   display: flex;
   flex-direction: column;
   align-items: center; 
-
-  margin: 10px auto;
+  margin: 30px auto;
   max-width: 75%;
 }
 
@@ -119,12 +126,11 @@ h2 {
 .contact-section {
   border: 1px solid black;
   background-color: rgb(205,147,228);
-  width: 75%;
+  width: 100%;
   height: 300px;
   display: flex;
   flex-direction: column;
   margin-bottom: 50px;
-
 }
 
 .info-card {
@@ -146,6 +152,7 @@ h2 {
 .msg-card {
   width: 100%; 
   border: 1px solid black;
+  border-top: 3px dotted black;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -194,9 +201,8 @@ input {
   box-shadow: 5px 5px #000000;
   margin: 20px 15px 20px 15px;
   border-radius: 8px;
-}
-.sub-btn:hover {
-  cursor: pointer;
+  font-size: 1.5em;
+  padding: 5px 15px;
 }
 
 .contact-section, .msg-card {
@@ -210,3 +216,4 @@ input {
   color: rgb(240, 181, 131)
 }
 
+html { scroll-behavior: smooth;}
