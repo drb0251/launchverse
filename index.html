@@ -110,7 +110,7 @@
     <h3>OR fill out this form and we'll be in touch in no time!</h3>
 
     <div class="msg-card">
-      <form name="contact-info" method=POST data-netlify="true" onSubmit="submit">
+      <form id="contact-form" name="contact-info" method=POST data-netlify="true" onSubmit="submit">
         <div>
           <label for="first">First name:</label>
           <input type="text" name="first" placeholder="John" required>
@@ -122,7 +122,7 @@
           <input type="number" name="mobile" placeholder="numbers only">         
         </div>
         <div>
-          <textarea placeholder="message here" rows="20" cols="10"></textarea>
+          <textarea form="contact-form" placeholder="message here" rows="20" cols="10"></textarea>
           <button class="sub-btn" type="submit" name="Submit">Submit</button> 
         </div>
 
