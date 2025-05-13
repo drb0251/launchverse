@@ -140,7 +140,7 @@ h2 {
 }
 
 .info-card {
-  width: 50%; 
+  width: 90%; 
   display: flex;
   flex-direction: row;
   align-items: start;
@@ -157,7 +157,7 @@ h2 {
   flex-direction: column;
   justify-content: start;
   align-items: center;
-  max-width: 50%;
+  width: 50%;
 }
 
 .msg-card input {
