@@ -6,7 +6,7 @@
 }
 
 body {
-  background-color: #121212;
+  background-color: #141414;
   font-family: 'Roboto', sans-serif;
   color: #FFFFFF;
   line-height: 1.6;
@@ -17,16 +17,18 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 20px 40px;
-  background-color: #1DB954; /* Spotify green */
+  background-color: rgba(29, 215, 96, 0.6); /* Reverted to Spotify green */
   position: sticky;
-  top: 0;
+  top: 10px;
   z-index: 1000;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.7);
+  box-shadow: 0 10px 20px rgba(29, 215, 96, 0.5);
+  border-radius: 50px;
+  margin: 10px 20px;
+  
 }
 
 .logo {
-  width: 150px;
-  cursor: pointer;
+  width: 200px;
 }
 
 nav ul {
@@ -36,24 +38,37 @@ nav ul {
 }
 
 nav ul li a {
-  color: #fff;
   text-decoration: none;
-  font-weight: 700;
-  font-size: 1.1rem;
-  padding: 8px 12px;
-  border-radius: 5px;
+  font-weight: 750;
+  font-size: 1.2rem;
+  padding: 10px 15px;
+  border-radius: 20px;
   transition: background-color 0.3s ease;
 }
 
+nav ul li a[href="#"],
+nav ul li a[href="#service"],
+nav ul li a[href="#contact"] {
+  color: black;
+}
+
 nav ul li a:hover {
-  background-color: #1ed760; /* Spotify lighter green */
+  background-color: #1ed760; /* Reverted to Spotify lighter green */
 }
 
 .hero-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
   text-align: center;
   padding: 80px 20px 60px;
-  background: linear-gradient(135deg, #191414, #1DB954); /* Dark to Spotify green gradient */
-  color: #fff;
+  color: #ccc;
+  height: 400px; /* Set a height to allow spacing */
+}
+
+.green-launchverse {
+  color: rgba(29, 215, 96, 0.7);
 }
 
 .hero-section h1 {
@@ -69,9 +84,16 @@ nav ul li a:hover {
   text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
 }
 
+.hero-section a {
+  margin-bottom: 30px;
+}
+.hero-section p {
+  font-size: 1.3rem;
+}
+
 .btn-primary {
   display: inline-block;
-  background-color: #1DB954; /* Spotify green */
+  background-color: #1DB954; /* Reverted to Spotify green */
   color: #fff;
   padding: 15px 30px;
   font-size: 1.2rem;
@@ -85,7 +107,7 @@ nav ul li a:hover {
 }
 
 .btn-primary:hover {
-  background-color: #14833b;
+  background-color: #14833b; /* Reverted to darker green */
   box-shadow: 0 3px #0f5a29;
 }
 
@@ -176,11 +198,39 @@ nav ul li a:hover {
 
 .info-card {
   background-color: #191414; /* dark */
-  color: #fff;
+  color: #ccc;
   padding: 25px 40px;
   border-radius: 15px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.7);
   min-width: 200px;
+}
+
+.info-card.glow {
+  box-shadow: 0 0 15px 5px rgba(29, 215, 96, 0.7);
+}
+
+form {
+  background-color: #191414; /* dark */
+  padding: 30px 40px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.7);
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+  transition: box-shadow 0.3s ease;
+}
+
+form.glow {
+  box-shadow: 0 0 15px 5px rgba(29, 215, 96, 0.7);
+}
+
+.section-separator {
+  height: 3px;
+  margin: 40px auto;
+  max-width: 80%;
+  border-radius: 30px;
+  background-color: #1DB954;
+  box-shadow: 0 0 15px 5px rgba(29, 215, 96, 0.7);
 }
 
 .info-card h2 {
@@ -199,7 +249,7 @@ form {
   border-radius: 15px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.7);
   max-width: 600px;
-  margin: 0 auto;
+  margin: 40px auto;
   text-align: left;
 }
 
@@ -229,7 +279,7 @@ textarea {
   font-family: 'Roboto', sans-serif;
   resize: vertical;
   background-color: #121212;
-  color: #fff;
+  color: #ccc;
 }
 
 textarea {
@@ -245,7 +295,7 @@ button.btn-primary {
   border-radius: 30px;
   border: none;
   background-color: #1DB954;
-  color: #fff;
+  color: #ccc;
   cursor: pointer;
   box-shadow: 0 5px #14833b;
   transition: background-color 0.3s ease;
@@ -273,4 +323,9 @@ button.btn-primary:hover {
   label, input, textarea {
     flex: 1 0 100%;
   }
+}
+
+#contact h3 {
+  color: #ccc;
+  font-size: 1.3rem;
 }
