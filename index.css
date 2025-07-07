@@ -59,7 +59,7 @@ nav ul {
 .hamburger span {
   width: 30px;
   height: 3px;
-  background: #1DB954;
+  background: black;
   border-radius: 2px;
   transition: all 0.3s linear;
   position: relative;
