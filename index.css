@@ -332,6 +332,9 @@ button.btn-primary:hover {
     padding-top: 0;
     padding-bottom: 0;
   }
+  .hero-section {
+    height: auto;
+  }
 }
 
 /* Accessibility: Focus styles for keyboard navigation */
