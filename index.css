@@ -323,6 +323,15 @@ button.btn-primary:hover {
   label, input, textarea {
     flex: 1 0 100%;
   }
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"] {
+    flex: 0 0 auto;
+    height: 40px;
+    line-height: 40px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 }
 
 /* Accessibility: Focus styles for keyboard navigation */
