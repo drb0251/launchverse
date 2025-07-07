@@ -16,6 +16,11 @@
   <body>
     <header role="banner">
       <img class="logo" src="logo.svg" alt="LaunchVerse logo">
+      <button class="hamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
       <nav role="navigation" aria-label="Primary navigation">
         <ul>
           <li><a href="#">Home</a></li>
@@ -23,6 +28,15 @@
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
+      <div class="side-panel" id="mobile-menu" aria-hidden="true">
+        <button class="close-btn" aria-label="Close navigation menu">&times;</button>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#service">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="overlay"></div>
     </header>
 
     <main role="main">
@@ -106,4 +120,30 @@
       </section>
     </main>
   </body>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const hamburger = document.querySelector('.hamburger');
+      const sidePanel = document.querySelector('.side-panel');
+      const overlay = document.querySelector('.overlay');
+      const closeBtn = document.querySelector('.close-btn');
+
+      function openMenu() {
+        sidePanel.style.transform = 'translateX(0)';
+        sidePanel.setAttribute('aria-hidden', 'false');
+        overlay.style.display = 'block';
+        hamburger.setAttribute('aria-expanded', 'true');
+      }
+
+      function closeMenu() {
+        sidePanel.style.transform = 'translateX(100%)';
+        sidePanel.setAttribute('aria-hidden', 'true');
+        overlay.style.display = 'none';
+        hamburger.setAttribute('aria-expanded', 'false');
+      }
+
+      hamburger.addEventListener('click', openMenu);
+      closeBtn.addEventListener('click', closeMenu);
+      overlay.addEventListener('click', closeMenu);
+    });
+  </script>
 </html>
