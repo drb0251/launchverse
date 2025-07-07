@@ -146,6 +146,16 @@
       hamburger.addEventListener('click', openMenu);
       closeBtn.addEventListener('click', closeMenu);
       overlay.addEventListener('click', closeMenu);
+
+      // Add event listeners to sidebar links to close menu on click in mobile view
+      const sidePanelLinks = sidePanel.querySelectorAll('ul li a');
+      sidePanelLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          if (window.innerWidth <= 768) {
+            closeMenu();
+          }
+        });
+      });
     });
   </script>
 </html>
